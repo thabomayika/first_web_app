@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/" method="post">
+            <input placeholder="Name" name="name">
+            <input placeholder="Post Content" name='post'>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% for post in posts %}
+        <div class="thabo">{{post[1] + ": " +post[2]}}</div>
+        {% endfor %}
+
+        <style>
+            .thabo {
+                text-align: center;
+                height: 50px;
+            }
+        </style>
+    </body>
+</html>
